@@ -1,14 +1,15 @@
-# Setup
+# Setup of the controls of the game
 yes_no = ["yes", "no"]
 directions = ["left", "right", "forward", "backward"]
 
-# Introduction
+
+# Introduction to the game and the story
 name = input("Who are you?\n")
 print("Hello, " + name + ". Let us begin.")
 print("You begin your journey on the edge of a mysterious and ominous darkness that lingers not far from your family home. You've always been curious about what lies beyond it. Today; you take that bold first step.")
 print("Can you find your path to the other side of the darkness and find what lies beyond?\n")
 
-# Start of game
+# The game's beginning
 response = ""
 while response not in yes_no:
     response = input("Will you step into the darkness?\nyes/no\n")
@@ -20,7 +21,7 @@ while response not in yes_no:
     else:
         print("I'm sorry, what?\n")
 
-# Next part of game
+# Main bulk of the game with all the different paths mapped out
 response = ""
 while response not in directions:
     print("To your left, you see a monster.")
@@ -36,7 +37,7 @@ while response not in directions:
         print ("To your left, a red light glows in the distance.")
         print ("To your right, strange voices call out to you.")
         print ("Ahead of you, a slow moving monster skulks around, you might be able to sneak past it.")
-        print ("Behind you, you canb return to where you came and travel in a different direction.")
+        print ("Behind you, you can return to where you came and travel in a different direction.")
         response = input("What direction do you move?\nleft/right/forward/backward\n")
         if response == "left":
                 print ("as you move closer, you see a shape start to form of what the red glow belonged to. A giant wolf leaps out at you, chasing you back out of the dark. YOu vow never to enter it again and live out your life in peace")
@@ -53,6 +54,8 @@ while response not in directions:
             print ("To your right, howls can be heard from deeper in the darkness")
             print ("behind you takes you back to where you came, maybe you can explore a different path")
             response = input ("What direction do you move?\nleft/right/backward\n")
+            if response == "left":
+                print ("You approach the object and discover it to be a key. I wonder if it will fit in that door... You put the key in your pocket.")
 
     elif response == "backward":
         print("You flee the dark, returning to your dull, but safe life.")
